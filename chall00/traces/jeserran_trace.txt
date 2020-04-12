@@ -4,3 +4,4 @@ expected_output: '#fcba03'
 user_output: '#0fc0ba03'
 Assertion failed: (!strcmp(result, expected)), function assert_results, file main.c, line 14.
 Exec: KO
+Compilation: OK

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-static int ft_strlen(char *str)
+static int	ft_strlen(char *str)
 {
 	int i;
 
@@ -24,7 +24,7 @@ static int ft_strlen(char *str)
 	return (i);
 }
 
-static int checking(char *s1, char *s2, int len)
+static int	checking(char *s1, char *s2, int len)
 {
 	int i;
 	int j;
@@ -37,14 +37,10 @@ static int checking(char *s1, char *s2, int len)
 	while (l < len)
 	{
 		k = 0;
-
 		while (s1[i] != s2[j] && j < len && i < len)
-		{
 			j++;
-		}
 		while (k < len)
 		{
-
 			if (s1[i] == '\0')
 				i = 0;
 			if (s2[j] == '\0')
@@ -55,33 +51,26 @@ static int checking(char *s1, char *s2, int len)
 				j++;
 			}
 			else
-			{
-				break;
-			}
+				break ;
 			k++;
 			if (k == len)
-			{
 				return (1);
-			}
 		}
 		l++;
 	}
 	return (0);
 }
 
-int hv_necklace(char *s1, char *s2)
+int		hv_necklace(char *s1, char *s2)
 {
 	int len_s1;
 	int len_s2;
 
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
-
 	if (len_s1 != len_s2)
 		return (0);
 	if (!len_s1 && !len_s2)
-	{
 		return (1);
-	}
 	return (checking(s1, s2, len_s1));
 }

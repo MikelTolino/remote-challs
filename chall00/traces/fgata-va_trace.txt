@@ -30,3 +30,4 @@ test: hv_rgb2hex(255, 255, 255)
 expected_output: '#ffffff'
 user_output: '#ffffff'
 Exec: OK
+Compilation: OK
